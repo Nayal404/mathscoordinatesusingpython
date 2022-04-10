@@ -1,11 +1,11 @@
-x = int(input('Enter the coordinate of x-axis \n'))
-y = int(input('Enter the coordinate of y-axis \n'))
-xy = (x,-y)
-yx = (-x,y)
-choice = input('Which side you want to reflect on? Type"X" for reflection on X Axis or Type "Y" for reflection on Y-Axis \n')
-if choice == "X":
-    print(f"The reflection of ({x}, {y}) is {xy} on x-axis")
-elif choice == "Y":
-    print(f"The reflection of ({x},{y}) is {yx} on y-axis ")
+x = int(input('Enter x - axis \n'))
+y = int(input('Enter y-axis \n'))
+user_choice = input('Enter where you want to rotate it? Type "+90" for anticlockwise or Type "-90" for clockwise or Type"180" for half turn \n')
+if user_choice == "+90":
+    print(f'The anticlockwise rotation of ({x},{y}) is ({y},{-x})')
+elif user_choice == "-90":
+    print(f'The clockwise rotation of ({x},{y}) is ({-y},{x})')
+elif user_choice == "180":
+    print(f'The half turn rotation of ({x},{y}) is ({-x},{-y})')
 else:
-    print(f'Invalid Option no such {choice} choice found Error404 *_* ')
+    print('Error*_*404 Invalid Option')
